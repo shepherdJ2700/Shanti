@@ -1,4 +1,11 @@
 import 'package:flutter/material.dart';
+import 'guided_breathing_screen.dart';
+import 'journal_screen.dart';
+import 'write_release_screen.dart';
+import 'doodle_pad_screen.dart';
+
+
+
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -23,28 +30,52 @@ class HomeScreen extends StatelessWidget {
 
               _HomeActionButton(
                 label: 'Guided Breathing',
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (_) => const GuidedBreathingScreen(),
+                    ),
+                  );
+                },
               ),
 
               const SizedBox(height: 16),
 
               _HomeActionButton(
                 label: 'Journaling',
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (_) => const JournalScreen(),
+                    ),
+                  );
+                },
               ),
 
               const SizedBox(height: 16),
 
               _HomeActionButton(
                 label: 'Write & Release',
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (_) => const WriteReleaseScreen(),
+                    ),
+                  );
+                },
               ),
 
               const SizedBox(height: 16),
 
               _HomeActionButton(
                 label: 'Doodle Pad',
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (_) => const DoodlePadScreen(),
+                    ),
+                  );
+                },
               ),
             ],
           ),
